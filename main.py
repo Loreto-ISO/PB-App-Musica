@@ -2,6 +2,8 @@ from contenido import Contenido
 from cancion import Cancion
 from podcast import Podcast
 from artista import Artista
+from playlist import Playlist
+from usuario import Usuario
 
 def main():
     
@@ -22,7 +24,22 @@ def main():
 
     nuevo_artista.mostrar_informacion()
 
+    #CREAR PLAYLIST
 
+    nueva_playlist = Playlist("Favoritos", "canciones que mes gustan")
+
+    # nueva_playlist.mostrar_playlist()
+
+    #AGREGAR CANCIONES A LA PLAYLIST
+
+    nueva_playlist.agregar_cancion(cancion_uno)
+    nueva_playlist.agregar_cancion(cancion_dos)
+
+    # CREAR USUARIO
+    nuevo_usuario = Usuario("Eric", "ea@gmail.com", True)
+    nuevo_usuario.crear_playlist(nueva_playlist)
+
+    nuevo_usuario.mostrar_informacion()
 
 
 if __name__=="__main__":
