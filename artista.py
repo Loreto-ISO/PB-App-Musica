@@ -18,7 +18,7 @@ class Artista:
         print(f"Genero {self.genero}")
         print("canciones")
 
-        if len(self.canciones) == 0:
+        if len(self.canciones) == 0: #logica de negocio de una aplicacion
             print("no tiene canciones registradas")
         else:
             for cancion in self.canciones:
